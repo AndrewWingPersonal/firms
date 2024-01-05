@@ -1,8 +1,8 @@
 
 import {useEffect, useState} from 'react';
 
-const userName = "<removed-for-security>";
-const apiKey = "<removed-for-security>";
+const userName = "REMOVED";
+const apiKey = "REMOVED";
 
 const useObtainAuth = () => {
 
@@ -10,8 +10,6 @@ const useObtainAuth = () => {
    const [token, setToken] = useState("")
 
    const url = "https://api.preqin.com/connect/token";
-
-   //const newURLSearchParams = window.URLSearchParams;
 
     useEffect(() => {
         const fetchData = async () => {
@@ -38,7 +36,7 @@ const useObtainAuth = () => {
            };
           
           fetchData();
-    }, [token]);
+    });
  
     return {token, loading}
 }
